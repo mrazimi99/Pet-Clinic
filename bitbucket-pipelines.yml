@@ -15,3 +15,4 @@ pipelines:
             - maven
           script:
             - mvn test --file pom.xml
+            - mvn org.pitest:pitest-maven:mutationCoverage
