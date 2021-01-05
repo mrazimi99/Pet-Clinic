@@ -14,4 +14,6 @@ pipelines:
           caches:
             - maven
           script:
-            - mvn surefire:test --file pom.xml
+            - mvn compile --file pom.xml
+            - mvn compiler:testCompile
+            - mvn -Dtest="bdd.BDDEntryPointAcceptanceTest" test
